@@ -111,7 +111,7 @@ print('4월의 유동인구가 가장 많은 구 : 강남구')
 ```
 
 ![1](https://user-images.githubusercontent.com/47622991/121793535-03927a00-cc3b-11eb-8e1c-5af6ae8ec303.png)
-
+4월의 유동인구가 가장 많은 구 : 강남구
 
 
 ### Q2. 4월과 7월의 강남구의 일별 유동인구는 어떤가요? (line)
