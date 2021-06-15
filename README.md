@@ -145,3 +145,85 @@ plt.show()
 
 
 ![2](https://user-images.githubusercontent.com/47622991/121793539-08efc480-cc3b-11eb-9ec0-cb60a862a2b2.png)
+
+
+
+
+-----------
+
+### 3 weeks 숙제
+### 나만의 워드 클라우드 만들기
+### 최애곡 가사 워드 클라우드 만드기
+### 내가 좋아하는 가사들을 txt 파일로 저장, 원하는 이미지 파일 저장 (week03 dict)
+
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+from wordcloud import WordCloud
+
+result = ""
+
+for number in range(1,7):
+    index = '{:02}'.format(number)
+    filename = 'Sole_' + index + '.txt'
+    
+    text = open('./data/'+ filename, 'r', encoding='utf-8-sig')
+    result += text.read().replace('\n', ' ')
+```
+
+
+
+### WordCloud    
+```
+font_path = 'C:\WINDOWS\Fonts\malgun.ttf'
+mask = np.array(Image.open('./data/cd.jpg'))
+wc = WordCloud(font_path=font_path, background_color='white', mask=mask)
+wc.generate(result)
+
+f = plt.figure(figsize=(40,40))
+plt.rcParams['font.family'] = 'Malgun Gothic'
+plt.imshow(wc, interpolation='bilinear')
+plt.title('WordCloud of Sole Musics' , size=40)
+plt.axis('off')
+plt.show()
+f.savefig('./data/SoleWordCloud.png')
+```
+
+
+![SoleWordCloud](https://user-images.githubusercontent.com/47622991/122008629-3d5ab080-cdf4-11eb-80fc-eafa02b48ea4.png)
+
+
+
+
+### 월요일과 화요일의 수강완료시간 비교
+```
+sparta_data = pd.read_csv('./data/enrolleds_detail.csv')
+
+format = '%Y-%m-%dT%H:%M:%S.%f'
+sparta_data['done_date_time'] = pd.to_datetime(sparta_data['done_date'],format=format)
+sparta_data['done_date_time_weekday'] = sparta_data['done_date_time'].dt.day_name()
+sparta_data['done_date_time_hour'] = sparta_data['done_date_time'].dt.hour
+
+sparta_data_of_monday = sparta_data[sparta_data['done_date_time_weekday'] == 'Monday']
+sparta_data_of_monday = sparta_data_of_monday.groupby('done_date_time_hour')['user_id'].count()
+
+sparta_date_of_tuesday = sparta_data[sparta_data['done_date_time_weekday'] == 'Tuesday']
+sparta_date_of_tuesday = sparta_date_of_tuesday.groupby('done_date_time_hour')['user_id'].count()
+
+plt.figure(figsize=(10,5))
+plt.plot(sparta_data_of_monday.index, sparta_data_of_monday, label = '월요일')
+plt.plot(sparta_date_of_tuesday.index, sparta_date_of_tuesday, label = '화요일')
+plt.xlabel('시간')
+plt.ylabel('수강완료 수')
+plt.xticks(np.arange(24))
+plt.title('월요일과 화요일의 수강완료 시간 비교')
+plt.legend()
+plt.show()
+
+print('월요일과 화요일을 비교했을 때, 화요일 18시에 마케팅하기 가장 좋다.')
+```
+
+![1](https://user-images.githubusercontent.com/47622991/122008567-2d42d100-cdf4-11eb-9a33-42ad544d76d4.png)
+
