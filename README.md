@@ -1,3 +1,4 @@
+![캡처](https://user-images.githubusercontent.com/47622991/123233361-f6b43700-d514-11eb-85e9-328be260e738.PNG)
 # 🍅 Sparta_coding
 
 ## 2021.06.07
@@ -236,6 +237,8 @@ print('월요일과 화요일을 비교했을 때, 화요일 18시에 마케팅�
 ## 4주차 과제
 
 ![heatmap](https://user-images.githubusercontent.com/47622991/123232274-f49da880-d513-11eb-853c-90deae9f95ea.PNG)
+
+![캡처](https://user-images.githubusercontent.com/47622991/123233383-fb78eb00-d514-11eb-8dae-c53743914b1d.PNG)
 
 [stocks_report.pdf](https://github.com/seunghy1468/Sparta_coding/files/6707736/stocks_report.pdf)
 
