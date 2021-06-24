@@ -152,7 +152,8 @@ plt.show()
 
 -----------
 
-### 3 weeks 숙제
+## 3주차 과제
+
 ### 나만의 워드 클라우드 만들기
 ### 최애곡 가사 워드 클라우드 만드기
 ### 내가 좋아하는 가사들을 txt 파일로 저장, 원하는 이미지 파일 저장 (week03 dict)
@@ -228,3 +229,20 @@ print('월요일과 화요일을 비교했을 때, 화요일 18시에 마케팅�
 
 ![1](https://user-images.githubusercontent.com/47622991/122008567-2d42d100-cdf4-11eb-9a33-42ad544d76d4.png)
 
+
+
+
+---------
+## 4주차 과제
+
+![heatmap](https://user-images.githubusercontent.com/47622991/123232274-f49da880-d513-11eb-853c-90deae9f95ea.PNG)
+
+[stocks_report.pdf](https://github.com/seunghy1468/Sparta_coding/files/6707736/stocks_report.pdf)
+
+* 분석
+  * 카카오와 네이버는 상당한 correlation이 존재한다.
+  * 예상과는 다르게 네이버는 카카오뿐만 아니라 LG화학과의 correlation이 존재한다.
+  * 삼성전자는 카카오, 네이버, 현대자동차 등 여러 회사와의 correlation이 존재한다.
+  * 현대모비스는 SK이노베이션과의 correlation은 높지만, LG화학과의 correlation은 낮다.
+  * SK이노베이션은 현대모비스와 현대자동차 모두 correlation이 높다.
+  * LG화학은 SK이노베이션과의 correlation이 카카오, 네이버, 삼성전자 등에 비해 낮다.
