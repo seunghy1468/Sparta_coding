@@ -1,4 +1,3 @@
-![캡처](https://user-images.githubusercontent.com/47622991/123233361-f6b43700-d514-11eb-85e9-328be260e738.PNG)
 # 🍅 Sparta_coding
 
 ## 2021.06.07
